@@ -1,10 +1,10 @@
 # Mandelbrot Generator
 
-This program makes use of a client-server model to generate a portable greymap (PGM) image of the Mandelbrot set. The client distributes the workload to a given list of servers, where each server calculates a sub-image of pixels that are later integrated by the client.
+This program makes use of a client-server model to generate a portable greymap (PGM) image of the [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set). The client distributes the workload to a given list of servers, where each server calculates a sub-image of pixels that are later integrated by the client.
 
 ## Server
 
-The server is implemented in javascript, or specifically Node.js, using the express module. By default it listens to localhost:3000, but can easily be set up to listen to a user defined ip-address and port. The only request it will respond to is given in the format:
+The server is implemented in javascript, or specifically [Node](https://nodejs.org/en/), using the express module. By default it listens to localhost:3000, but can easily be set up to listen to a user defined ip-address and port. The only request it will respond to is given in the format:
 ```js
 GET /mandelbrot/x_min/y_min/x_max/y_max/x_num/y_num/n_lim
 ```
